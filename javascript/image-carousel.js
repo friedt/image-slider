@@ -3,7 +3,7 @@
  * image carousel made in plain javascript, so no jquery needed
  * put an 'data-images' attribute with a list of image names on element .js-image-slider
  * put an element which invokes the modal, after invoked the images start loading.
- * After loading all images the arrow buttons are displayed
+ * After loading all images the navigation buttons are displayed
  * this image carousel will work from IE9+
  *
  * the modal dialog used here can have it's own classnames, it does not rely on that
