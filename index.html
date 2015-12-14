@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>image-slider</title>
+
+    <link type="text/css" rel="stylesheet" href="dist/image-carousel.css"/>
+    <script type="text/javascript" src="javascript/image-carousel.js"></script>
+</head>
+<body>
+<a href="#modal1" class="js-show-slider main-button">360 carousel</a>
+
+
+<div class="modal" id="modal1">
+    <div class="modal-fixed">
+        <h2 class="modal__header">Dit is een dialog box
+
+            <a href="#" class="modal__close icon-close-circle"></a>
+
+        </h2>
+
+        <div class="modal__body">
+            <div class="image-carousel js-image-slider"
+                 data-images="Archief1.jpg, Archief2.jpg, Archief3.jpg, Archief4.jpg, Archief5.jpg, Archief6.jpg, Archief7.jpg, Archief8.jpg, Archief9.jpg, Archief10.jpg">
+
+                <div class="loader">Images worden geladen...</div>
+
+                <a class="js-prev prev" href="#">&lt;</a>
+                <a class="js-next next" href="#">&gt;</a>
+
+                <div class="image-content">
+                    <img class="current-image"/>
+                </div>
+            </div>
+        </div>
+        <div class="modal__footer is-right">
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+</body>
+</html>

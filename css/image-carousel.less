@@ -1,0 +1,193 @@
+/* image slider  */
+
+.image-carousel{
+    position: relative;
+    background-color: #fff;
+    overflow: visible;
+
+    .loader{
+        display: none;
+        text-align: center;
+        margin: 0 auto;
+        background: none;
+        position: absolute;
+        top: 30px;
+
+
+    }
+
+    .current-image {
+        display: block;
+        margin: 0 auto;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    .prev,
+    .next {
+        margin-top:0;
+        text-indent: -333em;
+        display: none;
+        animation-duration: 0.5s;
+        animation-name: slidein;
+    }
+
+    .prev{
+        .vertical-align();
+        border-left:20px solid #ED6D24;
+        border-bottom:20px solid #ED6D24;
+        width:50px;
+        height:50px;
+        transform: rotate(45deg);
+
+    }
+    .next{
+        .vertical-align();
+        border-right:20px solid #ED6D24;
+        border-bottom:20px solid #ED6D24;
+        width:50px;
+        height:50px;
+        transform: rotate(-45deg);
+        right: 30px;
+
+    }
+
+    @keyframes slidein {
+        from {
+            height: 0;
+            width: 0;
+        }
+
+        to {
+            height: 50px;
+            width: 50px;
+        }
+    }
+
+
+}
+
+.is-visible {
+    display: block !important;
+}
+
+/* mixin */
+.vertical-align(@position: absolute) {
+    position: @position;
+    top: 50%;
+
+}
+
+/* modal TODO this is used in leaseplan-style-guide : model.less
+this is not part of lease-plan-corporate-styling yet */
+
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    pointer-events: auto;
+    opacity: 1;
+    display: none;
+
+    &:after {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000000;
+        opacity: 0.7;
+
+    }
+
+    &-show{
+        opacity: 1;
+        pointer-events: auto;
+        display: block;
+    }
+
+    &-fixed {
+        position: fixed;
+        z-index: 100000;
+        margin: 0;
+        background-color: #fff;
+        padding: 2px;
+        min-width: 400px;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+    &__header {
+        display: block;
+        background-color: #909090;
+        margin: 0;
+        padding: 0.4em;
+        color: #fff;
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+
+    &__body {
+        padding: 1.4em 0.4em 1.4em 75px;
+        margin: 0;
+        font-size: 1.2em;
+
+        &-info:before {
+            content: '';
+            background: url(images/icon_error-info.png) no-repeat;
+            height: 50px;
+            width: 50px;
+            display: block;
+            float: left;
+            margin-left: -65px;
+        }
+    }
+
+    &__footer {
+        padding: 0.4em;
+        margin: 0;
+    }
+
+    &__close {
+        display: inline-block;
+        float: right;
+        background-color: transparent;
+        text-decoration: none !important;
+        color: #d3d3d3 !important;
+        font-size: 26px;
+        margin-top: -4px;
+
+    }
+}
+
+.hidden{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
