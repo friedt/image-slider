@@ -11,7 +11,7 @@
  * note: addEventHandler, hasClass and removeClass are commonly used as global functions who can be moved to a generic file if you like
  */
 
-var lpImageCarousel = (function () {
+var ImageCarousel = (function () {
 
     'use strict';
     var imageSlider, sliderInvoker, modal, imageContent, next, prev, data, loadedImage = 1;
@@ -122,7 +122,7 @@ var lpImageCarousel = (function () {
         next = imageSlider.querySelector('.js-next');
         prev = imageSlider.querySelector('.js-prev');
         data = imageSlider.getAttribute('data-images').split(',');
-        lpImageCarousel.init();
+        ImageCarousel.init();
     }
 
     document.addEventListener('DOMContentLoaded',function(){
